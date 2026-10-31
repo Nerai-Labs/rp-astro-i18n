@@ -1,0 +1,28 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { useTranslations, ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+	return Object.keys(ui).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof typeof ui);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={t('services.title')} description={t('services.description')} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>{t('services.heading')}</h1>
+			<p>{t('services.body')}</p>
+		</main>
+		<Footer />
+	</body>
+</html>

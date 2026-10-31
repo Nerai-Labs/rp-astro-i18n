@@ -21,8 +21,16 @@ const t = useTranslations(lang as keyof typeof ui);
 		<Header />
 		<main>
 			<h1>{t('services.heading')}</h1>
+			<h2>Autopilot section</h2>
+			<p>A short section, with <a href="/x">a link</a> &amp; &#123;braces&#125;.</p>
 			<p>{t('services.body')}</p>
 		</main>
 		<Footer />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"name": "Autopilot FAQ",
+			"@type": "FAQPage",
+			"@context": "https://schema.org",
+			"mainEntity": []
+		})} />
 	</body>
 </html>

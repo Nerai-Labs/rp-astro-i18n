@@ -6,9 +6,9 @@ export const ui = {
 		'services.body': 'We build and tune sites.',
 	},
 	es: {
-		'services.title': 'Nuestros servicios',
+		'services.title': 'Autopilot title',
 		'services.description': 'Lo que hacemos por equipos que quieren un sitio rápido.',
-		'services.heading': 'Servicios para sitios rápidos',
+		'services.heading': 'Autopilot\'s heading',
 		'services.body': 'Construimos y afinamos sitios.',
 	},
 } as const;
